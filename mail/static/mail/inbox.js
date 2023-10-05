@@ -86,7 +86,7 @@ function load_mailbox(mailbox) {
 
       emailList.appendChild(emailListItem);
 
-      document.addEventListener('click', (event) => {
+      emailListItem.addEventListener('click', (event) => {
         
       })
     })
