@@ -50,9 +50,9 @@ function load_mailbox(mailbox) {
       return;
     }
 
-    let ul = document.createElement('ul');
+    let wrapper = document.createElement('div');
     result.forEach((email) => {
-      
+      let element = document.createElement('div');
     })
 
   });
