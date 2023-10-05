@@ -55,26 +55,30 @@ function load_mailbox(mailbox) {
     emailList.classList.add("list-group");
 
     result.forEach((email) => {
-      let element = document.createElement('div');
-      element.id = `email-${email.id}`;
-      element.classList.add("list-group-item", "list-group-item-action", "row");
+      let emailListItem = document.createElement('div');
+      emailListItem.id = `email-${email.id}`;
+      emailListItem.classList.add("list-group-item", "list-group-item-action");
+
+      let row = document.createElement('div');
+      row.classList.add("row");
+      emailListItem.appendChild(row);
 
       let sender = document.createElement('div');
       sender.innerHTML = email.sender;
-      element.appendChild(sender);
       sender.classList.add("pr-0", "col");
+      row.appendChild(sender);
 
       let subject = document.createElement('div');
       subject.innerHTML = email.subject;
-      element.appendChild(subject);
       subject.classList.add("pr-0", "col");
+      row.appendChild(subject);
 
       let timestamp = document.createElement('div');
       timestamp.innerHTML = email.timestamp;
-      element.appendChild(timestamp);
       timestamp.classList.add("pr-0", "col");
+      row.appendChild(timestamp);
 
-      emailList.appendChild(element);
+      emailList.appendChild(emailListItem);
     })
 
     emailsView.appendChild(emailList);
@@ -82,12 +86,6 @@ function load_mailbox(mailbox) {
   });
 
 
-
-
-
-
-
-  // Each email should then be rendered in its own box (e.g. as a <div> with a border) that displays who the email is from, what the subject line is, and the timestamp of the email.
   // If the email is unread, it should appear with a white background. If the email has been read, it should appear with a gray background.
 }
 
