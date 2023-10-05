@@ -53,6 +53,12 @@ function load_mailbox(mailbox) {
     let wrapper = document.createElement('div');
     result.forEach((email) => {
       let element = document.createElement('div');
+
+      let sender = document.createElement('div');
+      
+      let subject = document.createElement('div');
+
+      let date = document.createElement('div');
     })
 
   });
