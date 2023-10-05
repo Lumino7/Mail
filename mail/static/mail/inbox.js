@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelector('#compose-form').addEventListener('submit', send_email);
 
-  console.log('hello');
-
 
   // By default, load the inbox
   load_mailbox('inbox');
@@ -62,7 +60,7 @@ function send_email(event) {
       alert(result.error);
       return;
     }
-    
+
     load_mailbox('inbox');
   });
 }
