@@ -69,7 +69,8 @@ def compose(request):
             email.recipients.add(recipient)
         email.save()
 
-    return JsonResponse({"message": "Email sent successfully."}, status=201)
+    # return JsonResponse({"message": "Email sent successfully."}, status=201)
+    return HttpResponse
 
 
 @login_required
