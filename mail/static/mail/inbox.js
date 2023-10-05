@@ -57,10 +57,11 @@ function send_email(event) {
 
   .then(response => response.json())
   .then(result => {
-      // Print result
-      console.log(result);
-  })
-  .catch(response => {
-    alert(response.error)
-  })
+    if (result.error) {
+      alert(response.error);
+      return;
+    }
+
+    // @TODO - Success logic
+  });
 }
