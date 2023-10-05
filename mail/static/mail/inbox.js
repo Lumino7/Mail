@@ -51,8 +51,11 @@ function load_mailbox(mailbox) {
     }
 
     let wrapper = document.createElement('div');
+    wrapper.id = 'wrapper';
+
     result.forEach((email) => {
       let element = document.createElement('div');
+      element.id = `email-${email.id}`;
 
       let sender = document.createElement('div');
       sender.innerHTML = email.sender;
