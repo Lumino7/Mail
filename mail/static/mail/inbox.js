@@ -127,7 +127,7 @@ function send_email(event) {
   });
 }
 
-function show_email_content() {
+function show_email_content(id) {
   let emailsView = document.querySelector('#emails-view');
   let composeView = document.querySelector('#compose-view');
   let contentsView = document.querySelector('#contents-view');
