@@ -67,7 +67,7 @@ function load_mailbox(mailbox) {
       let subject = document.createElement('div');
       subject.innerHTML = email.subject;
       element.appendChild(subject);
-      subject.classList.add("pr-2");
+      subject.classList.add("pr-2", "col");
 
       let timestamp = document.createElement('div');
       timestamp.innerHTML = email.timestamp;
