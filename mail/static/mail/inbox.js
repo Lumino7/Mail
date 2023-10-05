@@ -59,6 +59,10 @@ function load_mailbox(mailbox) {
       emailListItem.id = `email-${email.id}`;
       emailListItem.classList.add("list-group-item", "list-group-item-action");
 
+      if (email.read) {
+        emailListItem.classList.add("list-group-item-light")
+      }
+
       let row = document.createElement('div');
       row.classList.add("row");
       emailListItem.appendChild(row);
@@ -82,11 +86,11 @@ function load_mailbox(mailbox) {
     })
 
     emailsView.appendChild(emailList);
-
   });
 
 
-  // If the email is unread, it should appear with a white background. If the email has been read, it should appear with a gray background.
+  // If the email is unread, it should appear with a white background.
+  // If the email has been read, it should appear with a gray background. list-group-item-light
 }
 
 function send_email(event) {
