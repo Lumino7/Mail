@@ -41,9 +41,21 @@ function load_mailbox(mailbox) {
 
   fetch(`/emails/${mailbox}`)
 
+  .then((response) => {
+    return response.json();
+  })
+  .then((result) => {
+    if (result.error) {
+      alert(result.error);
+      return;
+    }
+
+    load_mailbox('inbox');
+  });
+
   let ul = document.createElement('ul');
 
-  
+
 
 
 
