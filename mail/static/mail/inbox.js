@@ -87,7 +87,7 @@ function load_mailbox(mailbox) {
       emailList.appendChild(emailListItem);
 
       emailListItem.addEventListener('click', (event) => {
-
+        show_email_content();
       })
     })
 
@@ -122,3 +122,12 @@ function send_email(event) {
   });
 }
 
+function show_email_content() {
+  let emailsView = document.querySelector('#emails-view');
+  let composeView = document.querySelector('#compose-view');
+  let contentsView = document.querySelector('#contents-view');
+
+  // Show the mailbox and hide other views
+  emailsView.style.display = 'block';
+  composeView.style.display = 'none';
+}
