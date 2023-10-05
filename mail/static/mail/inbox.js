@@ -57,9 +57,9 @@ function send_email(event) {
   .then((response) => {
     return response.json();
   })
-  .then(result => {
+  .then((result) => {
     if (result.error) {
-      alert(response.error);
+      alert(result.error);
       return;
     }
 
