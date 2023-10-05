@@ -62,7 +62,7 @@ function send_email(event) {
       alert(result.error);
       return;
     }
-
-    // @TODO - Success logic
+    
+    load_mailbox('inbox');
   });
 }
