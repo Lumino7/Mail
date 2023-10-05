@@ -57,22 +57,22 @@ function load_mailbox(mailbox) {
     result.forEach((email) => {
       let element = document.createElement('div');
       element.id = `email-${email.id}`;
-      element.classList.add("list-group-item", "list-group-item-action", "col-12");
+      element.classList.add("list-group-item", "list-group-item-action", "row");
 
       let sender = document.createElement('div');
       sender.innerHTML = email.sender;
       element.appendChild(sender);
-      sender.classList.add("pr-2", "col-3");
+      sender.classList.add("pr-0", "col");
 
       let subject = document.createElement('div');
       subject.innerHTML = email.subject;
       element.appendChild(subject);
-      subject.classList.add("pr-2", "col-6");
+      subject.classList.add("pr-0", "col");
 
       let timestamp = document.createElement('div');
       timestamp.innerHTML = email.timestamp;
       element.appendChild(timestamp);
-      timestamp.classList.add("pr-0", "col-3");
+      timestamp.classList.add("pr-0", "col");
 
       emailList.appendChild(element);
     })
