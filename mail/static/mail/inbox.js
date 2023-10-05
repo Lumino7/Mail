@@ -136,4 +136,14 @@ function show_email_content() {
   emailsView.style.display = 'none';
   composeView.style.display = 'none';
 
+  fetch(`/emails/${mailbox}`)
+  .then((response) => {
+    return response.json();
+  })
+  .then((result) => {
+    if (result.error) {
+      alert(result.error);
+      return;
+    }
+  });
 }
