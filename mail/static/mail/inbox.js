@@ -87,7 +87,7 @@ function load_mailbox(mailbox) {
       emailList.appendChild(emailListItem);
 
       emailListItem.addEventListener('click', (event) => {
-        
+
       })
     })
 
@@ -121,3 +121,4 @@ function send_email(event) {
     load_mailbox('inbox');
   });
 }
+
