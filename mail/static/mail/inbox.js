@@ -85,6 +85,10 @@ function load_mailbox(mailbox) {
       row.appendChild(timestamp);
 
       emailList.appendChild(emailListItem);
+
+      document.addEventListener('click', (event) => {
+        
+      })
     })
 
     emailsView.appendChild(emailList);
