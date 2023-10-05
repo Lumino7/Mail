@@ -128,6 +128,8 @@ function show_email_content() {
   let contentsView = document.querySelector('#contents-view');
 
   // Show the mailbox and hide other views
-  emailsView.style.display = 'block';
+  contentsView.style.display = 'block';
+  emailsView.style.display = 'none';
   composeView.style.display = 'none';
+
 }
