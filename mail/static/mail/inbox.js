@@ -54,12 +54,9 @@ function send_email(event) {
       body: mailobject.get('compose-body')
     })
   })
-
-  .then(response => response.json())
   .then((response) => {
     return response.json();
   })
-
   .then(result => {
     if (result.error) {
       alert(response.error);
