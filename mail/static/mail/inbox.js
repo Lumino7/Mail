@@ -39,7 +39,7 @@ function load_mailbox(mailbox) {
   // Show the mailbox name
   emailsView.innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 
-  fetch('/emails/',)
+  fetch(`/emails/${mailbox}`,)
   // When a mailbox is visited, the application should first query the API for the latest emails in that mailbox.
   // Each email should then be rendered in its own box (e.g. as a <div> with a border) that displays who the email is from, what the subject line is, and the timestamp of the email.
   // If the email is unread, it should appear with a white background. If the email has been read, it should appear with a gray background.
