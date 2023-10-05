@@ -72,7 +72,7 @@ function load_mailbox(mailbox) {
       let timestamp = document.createElement('div');
       timestamp.innerHTML = email.timestamp;
       element.appendChild(timestamp);
-      timestamp.classList.add("pr-2", "col-3");
+      timestamp.classList.add("pr-0", "col-3");
 
       emailList.appendChild(element);
     })
