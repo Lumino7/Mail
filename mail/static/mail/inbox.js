@@ -51,8 +51,8 @@ function load_mailbox(mailbox) {
     }
 
     let ul = document.createElement('ul');
-    result.forEach(() => {
-     
+    result.forEach((email) => {
+
     })
 
   });
