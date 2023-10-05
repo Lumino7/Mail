@@ -65,7 +65,11 @@ function load_mailbox(mailbox) {
       let timestamp = document.createElement('div');
       timestamp.innerHTML = email.timestamp;
       element.appendChild(timestamp);
+
+      wrapper.appendChild(element);
     })
+
+    
 
   });
 
