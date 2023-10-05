@@ -49,8 +49,11 @@ function load_mailbox(mailbox) {
       alert(result.error);
       return;
     }
-    
+
     let ul = document.createElement('ul');
+    result.forEach(() => {
+     
+    })
 
   });
 
