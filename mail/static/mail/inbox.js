@@ -50,13 +50,14 @@ function load_mailbox(mailbox) {
       return;
     }
 
-    let wrapper = document.createElement('div');
-    wrapper.id = 'wrapper';
+    let emailList = document.createElement('div');
+    emailList.id = 'email-list';
+    emailList.classList.add("list-group");
 
     result.forEach((email) => {
       let element = document.createElement('div');
       element.id = `email-${email.id}`;
-      elemen
+      element.classList.add("list-group-item", "d-flex");
 
       let sender = document.createElement('div');
       sender.innerHTML = email.sender;
@@ -70,10 +71,10 @@ function load_mailbox(mailbox) {
       timestamp.innerHTML = email.timestamp;
       element.appendChild(timestamp);
 
-      wrapper.appendChild(element);
+      emailList.appendChild(element);
     })
 
-    emailsView.appendChild(wrapper);
+    emailsView.appendChild(emailList);
 
   });
 
