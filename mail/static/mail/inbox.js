@@ -61,6 +61,8 @@ function load_mailbox(mailbox) {
 
       if (email.read) {
         emailListItem.classList.add("list-group-item-light")
+      } else {
+        emailListItem.classList.add("font-weight-bold")
       }
 
       let row = document.createElement('div');
@@ -87,10 +89,6 @@ function load_mailbox(mailbox) {
 
     emailsView.appendChild(emailList);
   });
-
-
-  // If the email is unread, it should appear with a white background.
-  // If the email has been read, it should appear with a gray background. list-group-item-light
 }
 
 function send_email(event) {
