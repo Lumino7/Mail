@@ -29,12 +29,15 @@ function compose_email() {
 
 
 function load_mailbox(mailbox) {
+  let emailsView = document.querySelector('#emails-view');
+  let composeView = document.querySelector('#compose-view');
+
   // Show the mailbox and hide other views
-  document.querySelector('#emails-view').style.display = 'block';
-  document.querySelector('#compose-view').style.display = 'none';
+  emailsView.style.display = 'block';
+  composeView.style.display = 'none';
 
   // Show the mailbox name
-  document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
+  emailsView.innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 
   // You’ll likely want to make a GET request to /emails/<mailbox> to request the emails for a particular mailbox.
   // When a mailbox is visited, the application should first query the API for the latest emails in that mailbox.
@@ -45,9 +48,9 @@ function load_mailbox(mailbox) {
 
 function send_email(event) {
   event.preventDefault();
+
   let form = document.querySelector('#compose-form');
   let mailobject = new FormData(form);
-  console.log(mailobject);
 
   fetch('/emails', {
     method: 'POST',
