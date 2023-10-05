@@ -136,7 +136,7 @@ function show_email_content() {
   emailsView.style.display = 'none';
   composeView.style.display = 'none';
 
-  fetch(`/emails/${mailbox}`)
+  fetch(`/emails/${id}`)
   .then((response) => {
     return response.json();
   })
