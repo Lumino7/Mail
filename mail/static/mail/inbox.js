@@ -8,10 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelector('#compose-form').addEventListener('submit', send_email);
 
+  console.log('hello');
+
 
   // By default, load the inbox
   load_mailbox('inbox');
 });
+
+
 
 function compose_email() {
 
@@ -37,16 +41,17 @@ function load_mailbox(mailbox) {
 }
 
 function send_email() {
+  console.log('sendemail')
   let form = document.querySelector('#compose-form');
   let mailobject = new FormData(form);
-  console.log(mailobject)
+  console.log(mailobject);
 
   fetch('/emails', {
     method: 'POST',
     body: JSON.stringify({
-      recipients: mailobject.get('compose-recipients');,
-      subject: mailobject.get('compose-subject');,
-      body: mailobject.get('compose-body');
+      recipients: mailobject.get('compose-recipients'),
+      subject: mailobject.get('compose-subject'),
+      body: mailobject.get('compose-body')
     })
   })
 
