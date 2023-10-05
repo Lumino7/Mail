@@ -55,7 +55,7 @@ function load_mailbox(mailbox) {
       let element = document.createElement('div');
 
       let sender = document.createElement('div');
-      
+      sender.innerHTML = email.
       let subject = document.createElement('div');
 
       let date = document.createElement('div');
