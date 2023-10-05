@@ -69,7 +69,7 @@ function load_mailbox(mailbox) {
       wrapper.appendChild(element);
     })
 
-    
+    emailsView.appendChild(wrapper);
 
   });
 
