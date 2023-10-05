@@ -40,7 +40,10 @@ function load_mailbox(mailbox) {
   emailsView.innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 
   fetch(`/emails/${mailbox}`)
-  
+
+  let ul = document.createElement('ul');
+
+  for
 
 
 
