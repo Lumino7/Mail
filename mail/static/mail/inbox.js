@@ -92,7 +92,7 @@ function load_mailbox(mailbox) {
       emailList.appendChild(emailListItem);
 
       emailListItem.addEventListener('click', (event) => {
-        show_email_content();
+        show_email_content(email.id);
       })
     })
 
