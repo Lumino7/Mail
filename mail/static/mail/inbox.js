@@ -57,7 +57,7 @@ function load_mailbox(mailbox) {
     result.forEach((email) => {
       let element = document.createElement('div');
       element.id = `email-${email.id}`;
-      element.classList.add("list-group-item", "d-flex");
+      element.classList.add("list-group-item", "list-group-item-action", "d-flex");
 
       let sender = document.createElement('div');
       sender.innerHTML = email.sender;
