@@ -146,4 +146,6 @@ function show_email_content(id) {
       return;
     }
   });
+
+  // TODO: render the content
 }
