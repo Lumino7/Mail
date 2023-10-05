@@ -40,7 +40,8 @@ function load_mailbox(mailbox) {
   document.querySelector('#emails-view').innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 }
 
-function send_email() {
+function send_email(event) {
+  
   console.log('sendemail')
   let form = document.querySelector('#compose-form');
   let mailobject = new FormData(form);
