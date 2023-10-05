@@ -55,9 +55,9 @@ function load_mailbox(mailbox) {
     emailList.classList.add("list-group");
 
     result.forEach((email) => {
-      let element = document.createElement('a');
+      let element = document.createElement('div');
       element.id = `email-${email.id}`;
-      element.classList.add("list-group-item", "list-group-item-action");
+      element.classList.add("list-group-item", "list-group-item-action", "col-12");
 
       let sender = document.createElement('div');
       sender.innerHTML = email.sender;
@@ -72,7 +72,7 @@ function load_mailbox(mailbox) {
       let timestamp = document.createElement('div');
       timestamp.innerHTML = email.timestamp;
       element.appendChild(timestamp);
-      subject.classList.add("pr-2", "col-3");
+      timestamp.classList.add("pr-2", "col-3");
 
       emailList.appendChild(element);
     })
