@@ -41,8 +41,7 @@ function load_mailbox(mailbox) {
 }
 
 function send_email(event) {
-  
-  console.log('sendemail')
+  event.preventDefault();
   let form = document.querySelector('#compose-form');
   let mailobject = new FormData(form);
   console.log(mailobject);
