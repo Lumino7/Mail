@@ -56,6 +56,7 @@ function load_mailbox(mailbox) {
     result.forEach((email) => {
       let element = document.createElement('div');
       element.id = `email-${email.id}`;
+      elemen
 
       let sender = document.createElement('div');
       sender.innerHTML = email.sender;
