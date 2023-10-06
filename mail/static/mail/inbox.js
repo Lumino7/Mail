@@ -187,12 +187,12 @@ function show_email_content(id) {
     recipientItem.style = 'margin:0';
     recipientList.appendChild(recipientItem);
   })
-  recipientList.style = 'margin:0';
+  recipientList.classList.add('mb-0')
   recipientDiv.appendChild(recipientList);
 
   let subject = document.createElement('p');
   header.appendChild(subject);
-  subject.innerHTML = `<span class=font-weight-bold>Subject: </span> ${result.subject}`;
+  subject.innerHTML = `<span class=font-weight-bold, m-0>Subject: </span> ${result.subject}`;
 
   let timestamp = document.createElement('p');
   header.appendChild(timestamp);
