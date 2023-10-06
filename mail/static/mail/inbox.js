@@ -187,7 +187,7 @@ function show_email_content(id) {
     recipientItem.style.margin = '0';
     recipientList.appendChild(recipientItem);
   })
-  recipientList.classList.add('mb-0')
+  recipientList.style.margin = '0';
   recipientDiv.appendChild(recipientList);
 
   let subject = document.createElement('p');
