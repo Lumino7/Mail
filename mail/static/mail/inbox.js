@@ -198,14 +198,26 @@ function show_email_content(id) {
   subjectDiv.appendChild(subjectLabel);
   subjectLabel.classList.add('pr-2','font-weight-bold');
   subjectLabel.innerText = 'Subject:';
-  let subject = document.createElement('div');
-  header.appendChild(subject);
-  subject.innerHTML = `<span class=font-weight-bold>Subject: </span> ${result.subject}`;
 
-  let timestamp = document.createElement('div');
-  header.appendChild(timestamp);
-  timestamp.innerHTML = `<span class=font-weight-bold>Timestamp: </span> ${result.timestamp}`;
+  let subjectText = document.createElement('div');
+  subjectDiv.appendChild(subjectText);
+  subjectText.innerText = result.subject;
 
+  /**
+   * Timestamp field
+   */
+  let subjectDiv = document.createElement('div');
+  header.appendChild(subjectDiv);
+  subjectDiv.classList.add('d-flex');
+
+  let subjectLabel = document.createElement('div');
+  subjectDiv.appendChild(subjectLabel);
+  subjectLabel.classList.add('pr-2','font-weight-bold');
+  subjectLabel.innerText = 'Subject:';
+
+  let subjectText = document.createElement('div');
+  subjectDiv.appendChild(subjectText);
+  subjectText.innerText = result.subject;
 
   wrapper.appendChild(document.createElement('hr'));
 
