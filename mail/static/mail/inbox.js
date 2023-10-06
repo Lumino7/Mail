@@ -145,7 +145,6 @@ function show_email_content(id) {
       alert(result.error);
       return;
     }
-  });
 
   // TODO: render the content
   let wrapper = document.createElement('div');
@@ -154,7 +153,7 @@ function show_email_content(id) {
   wrapper.appendChild(header);
 
   let sender = document.createElement('p');
-  sender.innerHTML = result.sender;
+  sender.innerHTML = `From: ${result.sender}`;
   header.appendChild(sender);
 
   let recipient = document.createElement('p');
@@ -172,4 +171,5 @@ function show_email_content(id) {
 
 
   contentsView.appendChild(wrapper);
+});
 }
