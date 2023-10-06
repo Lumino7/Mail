@@ -137,6 +137,10 @@ function show_email_content(id) {
   emailsView.style.display = 'none';
   composeView.style.display = 'none';
 
+  contentsView.innerHTML = '';
+  emailsView.innerHTML = '';
+  composeView.innerHTML = '';
+
   fetch(`/emails/${id}`)
   .then((response) => {
     return response.json();
