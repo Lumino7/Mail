@@ -162,12 +162,13 @@ function show_email_content(id) {
   actions.id = 'actions';
   header.appendChild(actions);
 
-  let toggleArchiveButton = document.createElement('button');
-  actions.appendChild(toggleArchiveButton);
-  toggleArchiveButton.id = 'toggle-archive';
-  toggleArchiveButton.classList.add('btn', 'btn-sm', 'btn-primary');
-  toggleArchiveButton.innerText = result.archived ? 'Unarchive' : 'Archive';
-  // if (result.sender == )
+  if (result.sender !== currentUser) {
+    let toggleArchiveButton = document.createElement('button');
+    actions.appendChild(toggleArchiveButton);
+    toggleArchiveButton.id = 'toggle-archive';
+    toggleArchiveButton.classList.add('btn', 'btn-sm', 'btn-primary');
+    toggleArchiveButton.innerText = result.archived ? 'Unarchive' : 'Archive';
+  }
 
   /**
    * Sender field
