@@ -190,19 +190,26 @@ function show_email_content(id) {
   /**
    * Subject field
    */
-  let subject = document.createElement('p');
+  let subjectDiv = document.createElement('div');
+  header.appendChild(subjectDiv);
+  subjectDiv.classList.add('d-flex');
+
+  let subjectLabel = document.createElement('div');
+  subjectDiv.appendChild(subjectLabel);
+  subjectLabel.classList.add('pr-2','font-weight-bold');
+  subjectLabel.innerText = 'Subject:';
+  let subject = document.createElement('div');
   header.appendChild(subject);
   subject.innerHTML = `<span class=font-weight-bold>Subject: </span> ${result.subject}`;
-  subject.style.margin = '0';
 
-  let timestamp = document.createElement('p');
+  let timestamp = document.createElement('div');
   header.appendChild(timestamp);
   timestamp.innerHTML = `<span class=font-weight-bold>Timestamp: </span> ${result.timestamp}`;
 
 
   wrapper.appendChild(document.createElement('hr'));
 
-  let body = document.createElement('p');
+  let body = document.createElement('div');
   body.innerText = result.body;
   wrapper.appendChild(body);
 
