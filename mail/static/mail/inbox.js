@@ -192,7 +192,8 @@ function show_email_content(id) {
 
   let subject = document.createElement('p');
   header.appendChild(subject);
-  subject.innerHTML = `<span class=font-weight-bold, m-0>Subject: </span> ${result.subject}`;
+  subject.innerHTML = `<span class=font-weight-bold>Subject: </span> ${result.subject}`;
+  subject.style 
 
   let timestamp = document.createElement('p');
   header.appendChild(timestamp);
