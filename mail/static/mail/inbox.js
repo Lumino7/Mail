@@ -150,8 +150,15 @@ function show_email_content(id) {
   // TODO: render the content
   let wrapper = document.createElement('div');
 
-  let header = document.createElement('div')
-  wrapper.appendChild(header)
+  let header = document.createElement('div');
+  wrapper.appendChild(header);
 
-  let 
+  let from = document.createElement('p');
+  from.innerHTML = 
+
+  let to = document.createElement('p');
+
+  let subject = document.createElement('p');
+
+  let timestamp = document.createElement('p');
 }
