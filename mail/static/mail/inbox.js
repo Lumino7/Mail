@@ -162,11 +162,11 @@ function show_email_content(id) {
   actions.id = 'actions';
   header.appendChild(actions);
 
-  let archiveButton = document.createElement('button');
-  actions.appendChild(archiveButton);
-  archiveButton.id = 'archive';
-  archiveButton.classList.add('btn', 'btn-sm', 'btn-primary');
-  archiveButton.innerText = 'Archive';
+  let toggleArchiveButton = document.createElement('button');
+  actions.appendChild(toggleArchiveButton);
+  toggleArchiveButton.id = 'toggle-archive';
+  toggleArchiveButton.classList.add('btn', 'btn-sm', 'btn-primary');
+  toggleArchiveButton.innerText = 'Archive';
 
   /**
    * Sender field
