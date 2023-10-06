@@ -155,6 +155,7 @@ function show_email_content(id) {
 
   let details = document.createElement('div');
   details.id = 'details';
+  details.classList.add('flex-grow-1');
   header.appendChild(details);
 
   let actions = document.createElement('div');
