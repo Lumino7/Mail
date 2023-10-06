@@ -36,7 +36,7 @@
 
 {% block script %}
     <script>
-        let currentUser = "{{ request.user }}"
+        const currentUser = "{{ request.user }}";
     </script>
     <script src="{% static 'mail/inbox.js' %}"></script>
 {% endblock %}
