@@ -167,7 +167,7 @@ function show_email_content(id) {
     let toggleArchiveButton = document.createElement('button');
     actions.appendChild(toggleArchiveButton);
     toggleArchiveButton.id = 'toggle-archive';
-    toggleArchiveButton.classList.add('btn', 'btn-sm', 'btn-primary');
+    toggleArchiveButton.classList.add('ml-2', 'btn', 'btn-sm', 'btn-primary');
     toggleArchiveButton.innerText = result.archived ? 'Unarchive' : 'Archive';
 
     toggleArchiveButton.addEventListener('click', (event) => {
@@ -180,7 +180,7 @@ function show_email_content(id) {
     let replyButton = document.createElement('button');
     actions.appendChild(replyButton);
     replyButton.id = 'reply';
-    replyButton.classList.add('btn', 'btn-sm', 'btn-secondary');
+    replyButton.classList.add('ml-2', 'btn', 'btn-sm', 'btn-secondary');
     replyButton.innerText = 'Reply';
 
     replyButton.addEventListener('click', (event) => {
