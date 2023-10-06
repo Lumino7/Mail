@@ -184,6 +184,7 @@ function show_email_content(id) {
   result.recipients.forEach((recipient) => {
     let recipientItem = document.createElement('p');
     recipientItem.innerHTML = recipient;
+    recipientItem.classList.add('no-margin')
     recipientList.appendChild(recipientItem);
   })
   recipientDiv.appendChild(recipientList);
