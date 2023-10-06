@@ -158,7 +158,9 @@ function show_email_content(id) {
   header.appendChild(sender);
 
   let recipient = document.createElement('p');
-  result.recipients.forEach((recipient)
+  result.recipients.forEach((recipient) => {
+    
+  })
 
   let subject = document.createElement('p');
 
