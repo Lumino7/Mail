@@ -181,12 +181,12 @@ function show_email_content(id) {
   recipientLabel.innerText = 'To:';
 
   let recipientList = document.createElement('div');
-  recipientDiv.appendChild(recipientList);
   result.recipients.forEach((recipient) => {
     let recipientItem = document.createElement('p');
     recipientItem.innertext = recipient;
     recipientList.appendChild(recipientItem);
   })
+  recipientDiv.appendChild(recipientList);
 
   let subject = document.createElement('p');
   header.appendChild(subject);
