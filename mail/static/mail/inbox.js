@@ -93,6 +93,7 @@ function load_mailbox(mailbox) {
 
       emailListItem.addEventListener('click', (event) => {
         show_email_content(email.id);
+        put_as_read(email.id);
       })
     })
 
@@ -208,4 +209,8 @@ function show_email_content(id) {
 
   contentsView.appendChild(wrapper);
 });
+}
+
+function put_as_read(id) {
+  
 }
