@@ -166,7 +166,7 @@ function show_email_content(id) {
   actions.appendChild(toggleArchiveButton);
   toggleArchiveButton.id = 'toggle-archive';
   toggleArchiveButton.classList.add('btn', 'btn-sm', 'btn-primary');
-  toggleArchiveButton.innerText = 'Archive';
+  toggleArchiveButton.innerText = result.archived ? 'Unarchive' : 'Archive';
 
   /**
    * Sender field
