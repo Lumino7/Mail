@@ -165,9 +165,7 @@ function show_email_content(id) {
   actions.appendChild(archiveButton);
   archiveButton.id = 'archive';
   archiveButton.classList.add('btn', 'btn-sm', 'btn-primary');
-
-
-  // <button class="btn btn-sm btn-outline-primary" id="inbox">Inbox</button>
+  archiveButton.innerText = 'Archive';
 
   /**
    * Sender field
