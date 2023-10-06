@@ -212,5 +212,10 @@ function show_email_content(id) {
 }
 
 function put_as_read(id) {
-  
+  fetch(`/emails/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+        archived: true
+    })
+  })
 }
