@@ -152,9 +152,13 @@ function show_email_content(id) {
   header.id = 'header';
   wrapper.appendChild(header);
 
-  let header = document.createElement('div');
-  header.id = 'header';
-  wrapper.appendChild(header);
+  let details = document.createElement('div');
+  details.id = 'details';
+  header.appendChild(details);
+
+  let details = document.createElement('div');
+  details.id = 'details';
+  header.appendChild(details);
 
   /**
    * Sender field
