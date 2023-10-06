@@ -160,6 +160,7 @@ function show_email_content(id) {
 
   let actions = document.createElement('div');
   actions.id = 'actions';
+  actions.classList.add('d-flex', 'flex-gap-2');
   header.appendChild(actions);
 
   if (result.sender !== currentUser) {
@@ -174,6 +175,16 @@ function show_email_content(id) {
         .then(() => {
           load_mailbox('inbox');
         });
+    })
+
+    let replyButton = document.createElement('button');
+    actions.appendChild(replyButton);
+    replyButton.id = 'reply';
+    replyButton.classList.add('btn', 'btn-sm', 'btn-secondary');
+    replyButton.innerText = 'Reply';
+
+    replyButton.addEventListener('click', (event) => {
+      alert('Reply!');
     })
   }
 
