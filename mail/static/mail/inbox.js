@@ -150,5 +150,8 @@ function show_email_content(id) {
   // TODO: render the content
   let wrapper = document.createElement('div');
 
+  let header = document.createElement('div')
+  wrapper.appendChild(header)
+
   let 
 }
