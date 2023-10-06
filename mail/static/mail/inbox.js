@@ -260,7 +260,7 @@ function show_email_content(id) {
 }
 
 function toggle_email_read_state(id, state = true) {
-  fetch(`/emails/${id}`, {
+  return fetch(`/emails/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
         read: state
@@ -269,7 +269,7 @@ function toggle_email_read_state(id, state = true) {
 }
 
 function toggle_email_archive_state(id, state = true) {
-  fetch(`/emails/${id}`, {
+  return fetch(`/emails/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
         archived: state
