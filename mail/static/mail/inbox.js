@@ -97,7 +97,7 @@ function load_mailbox(mailbox) {
 
       emailListItem.addEventListener('click', (event) => {
         show_email_content(email.id);
-        put_as_read(email.id);
+        toggle_email_read_state(email.id);
       })
     })
 
@@ -254,7 +254,16 @@ function show_email_content(id) {
 });
 }
 
-function put_as_read(id) {
+function toggle_email_read_state(id, state = true) {
+  fetch(`/emails/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+        read: state
+    })
+  })
+}
+
+function toggle_email_archive_state(id) {
   fetch(`/emails/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
