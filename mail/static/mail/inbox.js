@@ -1,4 +1,11 @@
+let emailsView;
+let composeView;
+let contentsView;
+
 document.addEventListener('DOMContentLoaded', function() {
+  emailsView = document.querySelector('#emails-view');
+  composeView = document.querySelector('#compose-view');
+  contentsView = document.querySelector('#contents-view');
 
   // Use buttons to toggle between views
   document.querySelector('#inbox').addEventListener('click', () => load_mailbox('inbox'));
@@ -14,10 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function prepare_view(view) {
-  let emailsView = document.querySelector('#emails-view');
-  let composeView = document.querySelector('#compose-view');
-  let contentsView = document.querySelector('#contents-view');
-
   emailsView.style.display = 'none';
   composeView.style.display = 'none';
   contentsView.style.display = 'none';
