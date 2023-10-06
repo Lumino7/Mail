@@ -200,9 +200,12 @@ function show_email_content(id) {
   timestamp.innerHTML = `<span class=font-weight-bold>Timestamp: </span> ${result.timestamp}`;
 
 
+  wrapper.appendChild(document.createElement('hr'));
+
+  let body = document.createElement('p');
+  body.innerText = result.body;
+  wrapper.appendChild(body);
 
   contentsView.appendChild(wrapper);
-
-  
 });
 }
