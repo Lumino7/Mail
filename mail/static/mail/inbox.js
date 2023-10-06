@@ -169,7 +169,7 @@ function show_email_content(id) {
   /**
    * Recipient field
    */
-  let recipientDiv = document.createElement('p');
+  let recipientDiv = document.createElement('div');
   header.appendChild(recipientDiv);
   recipientDiv.classList.add('d-flex');
 
@@ -180,14 +180,13 @@ function show_email_content(id) {
 
   let recipientList = document.createElement('div');
   result.recipients.forEach((recipient) => {
-    let recipientItem = document.createElement('p');
+    let recipientItem = document.createElement('div');
     recipientItem.innerHTML = recipient;
-    recipientItem.style.margin = '0';
     recipientList.appendChild(recipientItem);
-  })
-  recipientList.style.margin = '0';
-  recipientDiv.appendChild(recipientList); //TODO: remove space after line break
-  
+  });
+
+  recipientDiv.appendChild(recipientList);
+
   /**
    * Subject field
    */
