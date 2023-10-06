@@ -191,6 +191,7 @@ function show_email_content(id) {
   let subject = document.createElement('p');
   header.appendChild(subject);
   subject.innerText = `Subject: ${result.subject}`;
+  subject.classList.add('pr-2','font-weight-bold');
 
   let timestamp = document.createElement('p');
   header.appendChild(timestamp);
