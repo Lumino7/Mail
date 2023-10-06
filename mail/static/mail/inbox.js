@@ -182,7 +182,7 @@ function show_email_content(id) {
 
   let recipientList = document.createElement('div');
   result.recipients.forEach((recipient) => {
-    let recipientItem = document.createElement('p');
+    let recipientItem = document.createElement('span');
     recipientItem.innerHTML = recipient;
     recipientList.appendChild(recipientItem);
   })
