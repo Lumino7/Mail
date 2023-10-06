@@ -13,7 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
   load_mailbox('inbox');
 });
 
+function prepare_views(view) {
+  let emailsView = document.querySelector('#emails-view');
+  let composeView = document.querySelector('#compose-view');
+  let contentsView = document.querySelector('#contents-view');
 
+  emailsView.style.display = 'block';
+  composeView.style.display = 'none';
+  contentsView.style.display = 'none';
+
+  contentsView.innerHTML = '';
+  emailsView.innerHTML = '';
+}
 
 function compose_email() {
 
