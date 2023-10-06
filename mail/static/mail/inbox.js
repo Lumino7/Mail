@@ -158,11 +158,18 @@ function show_email_content(id) {
   header.appendChild(sender);
 
   let recipient = document.createElement('p');
+  header.appendChild(recipient);
   result.recipients.forEach((recipient) => {
-    
+
   })
 
   let subject = document.createElement('p');
+  header.appendChild(subject);
 
   let timestamp = document.createElement('p');
+  header.appendChild(timestamp);
+
+
+
+  contentsView.appendChild(wrapper);
 }
