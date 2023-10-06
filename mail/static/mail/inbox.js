@@ -153,7 +153,7 @@ function show_email_content(id) {
   wrapper.appendChild(header);
 
   let sender = document.createElement('p');
-  sender.innerHTML = `From: ${result.sender}`;
+  sender.innerHTML = `<span class="font-weight-bold">From:</span> ${result.sender}`;
   header.appendChild(sender);
 
   let recipient = document.createElement('p');
