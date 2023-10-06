@@ -153,10 +153,10 @@ function show_email_content(id) {
   let header = document.createElement('div');
   wrapper.appendChild(header);
 
-  let from = document.createElement('p');
-  from.innerHTML = 
+  let sender = document.createElement('p');
+  // sender.innerHTML =
 
-  let to = document.createElement('p');
+  let recipient = document.createElement('p');
 
   let subject = document.createElement('p');
 
