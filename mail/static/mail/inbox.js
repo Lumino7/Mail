@@ -18,23 +18,19 @@ function prepare_view(view) {
   let composeView = document.querySelector('#compose-view');
   let contentsView = document.querySelector('#contents-view');
 
-  emailsView.style.display = 'block';
+  emailsView.style.display = 'none';
   composeView.style.display = 'none';
   contentsView.style.display = 'none';
+
+  let activeView = document.querySelector(`#${view}-view`);
+  activeView.style.display = 'block';
 
   contentsView.innerHTML = '';
   emailsView.innerHTML = '';
 }
 
 function compose_email() {
-
-  let emailsView = document.querySelector('#emails-view');
-  let composeView = document.querySelector('#compose-view');
-  let contentsView = document.querySelector('#contents-view');
-
-  emailsView.style.display = 'none';
-  composeView.style.display = 'block';
-  contentsView.style.display = 'none';
+  prepare_view('compose');
 
   // Clear out composition fields
   document.querySelector('#compose-recipients').value = '';
@@ -134,16 +130,7 @@ function send_email(event) {
 }
 
 function show_email_content(id) {
-  let emailsView = document.querySelector('#emails-view');
-  let composeView = document.querySelector('#compose-view');
-  let contentsView = document.querySelector('#contents-view');
-
-  contentsView.style.display = 'block';
-  emailsView.style.display = 'none';
-  composeView.style.display = 'none';
-
-  contentsView.innerHTML = '';
-  emailsView.innerHTML = '';
+  prepare_view('contents');
 
   fetch(`/emails/${id}`)
   .then((response) => {
