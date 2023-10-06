@@ -188,7 +188,7 @@ function show_email_content(id) {
     recipientList.appendChild(recipientItem);
   })
   recipientList.style.margin = '0';
-  recipientDiv.appendChild(recipientList);
+  recipientDiv.appendChild(recipientList); //TODO: remove space after line break
 
   let subject = document.createElement('p');
   header.appendChild(subject);
