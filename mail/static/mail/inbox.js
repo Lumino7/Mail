@@ -184,7 +184,7 @@ function show_email_content(id) {
   result.recipients.forEach((recipient) => {
     let recipientItem = document.createElement('p');
     recipientItem.innerHTML = recipient;
-    recipientItem.style = 'margin:0';
+    recipientItem.style.margin = '0';
     recipientList.appendChild(recipientItem);
   })
   recipientList.classList.add('mb-0')
@@ -193,7 +193,7 @@ function show_email_content(id) {
   let subject = document.createElement('p');
   header.appendChild(subject);
   subject.innerHTML = `<span class=font-weight-bold>Subject: </span> ${result.subject}`;
-  subject.style 
+  subject.style.margin = '0';
 
   let timestamp = document.createElement('p');
   header.appendChild(timestamp);
