@@ -41,6 +41,10 @@ function load_mailbox(mailbox) {
   composeView.style.display = 'none';
   contentsView.style.display = 'none';
 
+  contentsView.innerHTML = '';
+  emailsView.innerHTML = '';
+  composeView.innerHTML = '';
+
   // Show the mailbox name
   emailsView.innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
 
