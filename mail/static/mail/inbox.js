@@ -43,7 +43,6 @@ function load_mailbox(mailbox) {
 
   contentsView.innerHTML = '';
   emailsView.innerHTML = '';
-  composeView.innerHTML = '';
 
   // Show the mailbox name
   emailsView.innerHTML = `<h3>${mailbox.charAt(0).toUpperCase() + mailbox.slice(1)}</h3>`;
@@ -143,7 +142,6 @@ function show_email_content(id) {
 
   contentsView.innerHTML = '';
   emailsView.innerHTML = '';
-  composeView.innerHTML = '';
 
   fetch(`/emails/${id}`)
   .then((response) => {
