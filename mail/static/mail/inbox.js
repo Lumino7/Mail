@@ -171,6 +171,7 @@ function show_email_content(id) {
 
     toggleArchiveButton.addEventListener('click', (event) => {
       toggle_email_archive_state(email.id, !result.archived);
+      load_mailbox('inbox');
     })
   }
 
