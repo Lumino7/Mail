@@ -145,7 +145,6 @@ function show_email_content(id) {
       return;
     }
 
-  // TODO: render the content
   let wrapper = document.createElement('div');
 
   let header = document.createElement('div');
@@ -188,7 +187,10 @@ function show_email_content(id) {
   })
   recipientList.style.margin = '0';
   recipientDiv.appendChild(recipientList); //TODO: remove space after line break
-
+  
+  /**
+   * Subject field
+   */
   let subject = document.createElement('p');
   header.appendChild(subject);
   subject.innerHTML = `<span class=font-weight-bold>Subject: </span> ${result.subject}`;
