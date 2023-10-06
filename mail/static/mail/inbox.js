@@ -160,7 +160,7 @@ function show_email_content(id) {
 
   let actions = document.createElement('div');
   actions.id = 'actions';
-  actions.classList.add('d-flex');
+  actions.classList.add();
   header.appendChild(actions);
 
   if (result.sender !== currentUser) {
@@ -180,7 +180,7 @@ function show_email_content(id) {
     let replyButton = document.createElement('button');
     actions.appendChild(replyButton);
     replyButton.id = 'reply';
-    replyButton.classList.add('ml-2', 'btn', 'btn-sm', 'btn-secondary');
+    replyButton.classList.add('ml-2', 'btn', 'btn-sm', 'btn-success');
     replyButton.innerText = 'Reply';
 
     replyButton.addEventListener('click', (event) => {
