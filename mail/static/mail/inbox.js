@@ -152,7 +152,8 @@ function show_email_content(id) {
   let header = document.createElement('div');
   wrapper.appendChild(header);
 
-  let sender = document.createElement('p');
+  let sender = document.createElement('div');
+  sender.classList.add('d-flex');
   sender.innerHTML = `<span class="font-weight-bold">From:</span> ${result.sender}`;
   header.appendChild(sender);
 
@@ -161,6 +162,14 @@ function show_email_content(id) {
   result.recipients.forEach((recipient) => {
 
   })
+
+//   <div class="d-flex"><div class="pr-2"><span class="font-weight-bold">From:</span></div>
+// <div>
+//     <p>superuser@noreply.com</p>
+// <p>superuser@noreply.com</p>
+// <p>superuser@noreply.com</p>
+// <p>superuser@noreply.com</p>
+// <p>superuser@noreply.com</p></div><p></p><p></p><p></p></div>
 
   let subject = document.createElement('p');
   header.appendChild(subject);
