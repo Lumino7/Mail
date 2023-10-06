@@ -154,6 +154,14 @@ function show_email_content(id) {
 
   let sender = document.createElement('div');
   sender.classList.add('d-flex');
+
+  let senderLabel = document.createElement('div');
+  senderLabel.classList.add('pr-2','font-weight-bold');
+  senderLabel.innerText = 'From:';
+
+  let sender = document.createElement('div');
+  sender.classList.add('d-flex');
+
   sender.innerHTML = `<span class="font-weight-bold">From:</span> ${result.sender}`;
   header.appendChild(sender);
 
