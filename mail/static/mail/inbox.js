@@ -202,5 +202,7 @@ function show_email_content(id) {
 
 
   contentsView.appendChild(wrapper);
+
+  
 });
 }
