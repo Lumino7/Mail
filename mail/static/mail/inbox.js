@@ -152,19 +152,25 @@ function show_email_content(id) {
   let header = document.createElement('div');
   wrapper.appendChild(header);
 
+  /**
+   * Sender field
+   */
   let sender = document.createElement('div');
+  header.appendChild(sender);
   sender.classList.add('d-flex');
 
   let senderLabel = document.createElement('div');
+  sender.appendChild(senderLabel);
   senderLabel.classList.add('pr-2','font-weight-bold');
   senderLabel.innerText = 'From:';
 
-  let sender = document.createElement('div');
-  sender.classList.add('d-flex');
+  let senderList = document.createElement('div');
+  sender.appendChild(senderList);
+  senderList.innerText = result.sender;
 
-  sender.innerHTML = `<span class="font-weight-bold">From:</span> ${result.sender}`;
-  header.appendChild(sender);
-
+  /**
+   * Recipient field
+   */
   let recipient = document.createElement('p');
   header.appendChild(recipient);
   result.recipients.forEach((recipient) => {
