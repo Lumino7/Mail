@@ -153,18 +153,19 @@ function show_email_content(id) {
   /**
    * Sender field
    */
-  let sender = document.createElement('div');
-  header.appendChild(sender);
-  sender.classList.add('d-flex');
+  let senderDiv = document.createElement('div');
+  header.appendChild(senderDiv);
+  senderDiv.classList.add('d-flex');
 
   let senderLabel = document.createElement('div');
-  sender.appendChild(senderLabel);
+  senderDiv.appendChild(senderLabel);
   senderLabel.classList.add('pr-2','font-weight-bold');
-  senderLabel.innerText = 'From:';
+  senderLabel.innerText = 'Sender:';
 
-  let senderList = document.createElement('div');
-  sender.appendChild(senderList);
-  senderList.innerText = result.sender;
+  let senderText = document.createElement('div');
+  senderDiv.appendChild(senderText);
+  senderText.innerText = result.sender;
+
 
   /**
    * Recipient field
@@ -206,19 +207,22 @@ function show_email_content(id) {
   /**
    * Timestamp field
    */
-  let subjectDiv = document.createElement('div');
-  header.appendChild(subjectDiv);
-  subjectDiv.classList.add('d-flex');
+  let timestampDiv = document.createElement('div');
+  header.appendChild(timestampDiv);
+  timestampDiv.classList.add('d-flex');
 
-  let subjectLabel = document.createElement('div');
-  subjectDiv.appendChild(subjectLabel);
-  subjectLabel.classList.add('pr-2','font-weight-bold');
-  subjectLabel.innerText = 'Subject:';
+  let timestampLabel = document.createElement('div');
+  timestampDiv.appendChild(timestampLabel);
+  timestampLabel.classList.add('pr-2','font-weight-bold');
+  timestampLabel.innerText = 'Timestamp:';
 
-  let subjectText = document.createElement('div');
-  subjectDiv.appendChild(subjectText);
-  subjectText.innerText = result.subject;
+  let timestampText = document.createElement('div');
+  timestampDiv.appendChild(timestampText);
+  timestampText.innerText = result.timestamp;
 
+  /**
+   * Body
+   */
   wrapper.appendChild(document.createElement('hr'));
 
   let body = document.createElement('div');
