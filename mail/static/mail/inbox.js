@@ -146,8 +146,14 @@ function show_email_content(id) {
     }
 
   let wrapper = document.createElement('div');
+  wrapper.id = 'wrapper';
 
   let header = document.createElement('div');
+  header.id = 'header';
+  wrapper.appendChild(header);
+
+  let header = document.createElement('div');
+  header.id = 'header';
   wrapper.appendChild(header);
 
   /**
@@ -226,6 +232,7 @@ function show_email_content(id) {
   wrapper.appendChild(document.createElement('hr'));
 
   let body = document.createElement('div');
+  body.id = 'body';
   body.innerText = result.body;
   wrapper.appendChild(body);
 
