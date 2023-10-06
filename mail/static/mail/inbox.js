@@ -194,6 +194,7 @@ function show_email_content(id) {
 
   let timestamp = document.createElement('p');
   header.appendChild(timestamp);
+  timestamp.innerHTML = `<span class=font-weight-bold>Timestamp: </span> ${result.timestamp}`;
 
 
 
