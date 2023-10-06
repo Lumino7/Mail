@@ -171,19 +171,20 @@ function show_email_content(id) {
   /**
    * Recipient field
    */
-  let recipient = document.createElement('p');
-  header.appendChild(recipient);
-  recipient.classList.add('d-flex');
+  let recipientdiv = document.createElement('p');
+  header.appendChild(recipientdiv);
+  recipientdiv.classList.add('d-flex');
 
   let recipientLabel = document.createElement('div');
-  recipient.appendChild(recipientLabel);
+  recipientdiv.appendChild(recipientLabel);
   recipientLabel.classList.add('pr-2','font-weight-bold');
   recipientLabel.innerText = 'To:';
 
   let recipientList = document.createElement('div');
-  recipient.appendChild(recipientList);
+  recipientdiv.appendChild(recipientList);
   result.recipients.forEach((recipient) => {
-    let re
+    let recipient = document.createElement('p')
+    recipient.innertext
   })
 
   let subject = document.createElement('p');
