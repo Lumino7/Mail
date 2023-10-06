@@ -150,21 +150,30 @@ function show_email_content(id) {
 
   let header = document.createElement('div');
   header.id = 'header';
+  header.classList.add('d-flex');
   wrapper.appendChild(header);
 
   let details = document.createElement('div');
   details.id = 'details';
   header.appendChild(details);
 
-  let details = document.createElement('div');
-  details.id = 'details';
-  header.appendChild(details);
+  let actions = document.createElement('div');
+  actions.id = 'actions';
+  header.appendChild(actions);
+
+  let archiveButton = document.createElement('button');
+  actions.appendChild(archiveButton);
+  archiveButton.id = 'archive';
+  archiveButton.classList.add('btn', 'btn-sm', 'btn-primary');
+
+
+  // <button class="btn btn-sm btn-outline-primary" id="inbox">Inbox</button>
 
   /**
    * Sender field
    */
   let senderDiv = document.createElement('div');
-  header.appendChild(senderDiv);
+  details.appendChild(senderDiv);
   senderDiv.classList.add('d-flex');
 
   let senderLabel = document.createElement('div');
@@ -181,7 +190,7 @@ function show_email_content(id) {
    * Recipient field
    */
   let recipientDiv = document.createElement('div');
-  header.appendChild(recipientDiv);
+  details.appendChild(recipientDiv);
   recipientDiv.classList.add('d-flex');
 
   let recipientLabel = document.createElement('div');
@@ -202,7 +211,7 @@ function show_email_content(id) {
    * Subject field
    */
   let subjectDiv = document.createElement('div');
-  header.appendChild(subjectDiv);
+  details.appendChild(subjectDiv);
   subjectDiv.classList.add('d-flex');
 
   let subjectLabel = document.createElement('div');
@@ -218,7 +227,7 @@ function show_email_content(id) {
    * Timestamp field
    */
   let timestampDiv = document.createElement('div');
-  header.appendChild(timestampDiv);
+  details.appendChild(timestampDiv);
   timestampDiv.classList.add('d-flex');
 
   let timestampLabel = document.createElement('div');
