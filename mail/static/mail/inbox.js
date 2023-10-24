@@ -69,7 +69,7 @@ function load_mailbox(mailbox) {
       emailListItem.classList.add("list-group-item", "list-group-item-action");
 
       if (email.read) {
-        emailListItem.classList.add("list-group-item-light")
+        emailListItem.classList.add("list-group-item-dark")
       } else {
         emailListItem.classList.add("font-weight-bold")
       }
@@ -128,7 +128,7 @@ function send_email(event) {
       return;
     }
 
-    load_mailbox('inbox');
+    load_mailbox('sent');
   });
 }
 
@@ -184,7 +184,7 @@ function show_email_content(id) {
     replyButton.innerText = 'Reply';
 
     replyButton.addEventListener('click', (event) => {
-      alert('Reply!');
+      reply(result);
     })
   }
 
@@ -288,4 +288,24 @@ function toggle_email_archive_state(id, state = true) {
         archived: state
     })
   })
+}
+
+
+function reply(emailObject) {
+  prepare_view('compose');
+
+  // Pre-fill composition fields
+  document.querySelector('#compose-recipients').value = `${emailObject.sender}`;
+
+  let replySubject;
+
+  if (emailObject.subject.startsWith('Re:')){
+    replySubject = emailObject.subject;
+  } else {
+    replySubject = `Re: ${emailObject.subject}`;
+  }
+
+  document.querySelector('#compose-subject').value = replySubject;
+  document.querySelector('#compose-body').value = `On ${emailObject.timestamp},
+  ${emailObject.sender} wrote:\n\n${emailObject.body}`;
 }
